@@ -4,51 +4,39 @@
     "slug": "de-olho-na-validade",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/assets/logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#002164"
+      "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.osmar.deolhonavalidade"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#002164"
+        "foregroundImage": "./src/assets/logo.png",
+        "backgroundColor": "#ffffff"
       },
-      "package": "com.osmar.deolhonavalidade",
-      "permissions": [
-        "CAMERA",
-        "NOTIFICATIONS",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
-      ]
+      "package": "com.osmargyn.deolhonavalidade"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./src/assets/logo.png"
     },
     "plugins": [
       [
         "expo-camera",
         {
-          "cameraPermission": "Precisamos da câmera para ler o código de barras e fotografar os produtos."
+          "cameraPermission": "Permitir que o App acesse a câmera para ler códigos de barras e tirar fotos dos produtos."
         }
       ],
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/icon.png",
-          "color": "#002164"
-        }
-      ],
-      "expo-sqlite"
-    ]
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "seu-id-do-projeto-aqui"
+      }
+    }
   }
 }
