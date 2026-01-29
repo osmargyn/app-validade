@@ -12,31 +12,22 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.osmarcruz.deolhonavalidade"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/logo.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.osmargyn.deolhonavalidade"
+      "package": "com.osmarcruz.deolhonavalidade"
     },
     "web": {
       "favicon": "./src/assets/logo.png"
     },
     "plugins": [
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Permitir que o App acesse a câmera para ler códigos de barras e tirar fotos dos produtos."
-        }
-      ],
-      "expo-font"
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "seu-id-do-projeto-aqui"
-      }
-    }
+      "expo-font",
+      "expo-sqlite"
+    ]
   }
 }
