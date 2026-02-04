@@ -2,7 +2,7 @@
   "expo": {
     "name": "De Olho na Validade",
     "slug": "de-olho-na-validade",
-    "version": "1.0.0",
+    "version": "2.2.0",
     "orientation": "portrait",
     "icon": "./src/assets/logo.png",
     "userInterfaceStyle": "light",
@@ -13,21 +13,52 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.osmarcruz.deolhonavalidade"
+      "bundleIdentifier": "com.osmarcruz.deolhonavalidade",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Precisamos da câmera para ler códigos de barras e tirar fotos dos produtos.",
+        "NSPhotoLibraryUsageDescription": "Precisamos acessar suas fotos para salvar os produtos."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/logo.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.osmarcruz.deolhonavalidade"
+      "package": "com.osmarcruz.deolhonavalidade",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "NOTIFICATIONS",
+        "SCHEDULE_EXACT_ALARM"
+      ]
     },
     "web": {
       "favicon": "./src/assets/logo.png"
     },
     "plugins": [
       "expo-font",
-      "expo-sqlite"
-    ]
+      "expo-sqlite",
+      "@react-native-community/datetimepicker",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Precisamos da câmera para ler códigos de barras e tirar fotos dos produtos."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./src/assets/logo.png",
+          "color": "#0D1B2A"
+        }
+      ],
+      "expo-file-system"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a5e461c0-f2ac-4aa8-9d33-159e97429eae"
+      }
+    }
   }
 }
