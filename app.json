@@ -2,7 +2,7 @@
   "expo": {
     "name": "De Olho na Validade",
     "slug": "de-olho-na-validade",
-    "version": "2.2.0",
+    "version": "2.3.0",
     "orientation": "portrait",
     "icon": "./src/assets/logo.png",
     "userInterfaceStyle": "light",
@@ -31,7 +31,8 @@
         "READ_EXTERNAL_STORAGE",
         "WRITE_EXTERNAL_STORAGE",
         "NOTIFICATIONS",
-        "SCHEDULE_EXACT_ALARM"
+        "SCHEDULE_EXACT_ALARM",
+        "VIBRATE"
       ]
     },
     "web": {
@@ -51,7 +52,8 @@
         "expo-notifications",
         {
           "icon": "./src/assets/logo.png",
-          "color": "#0D1B2A"
+          "color": "#0D1B2A",
+          "sounds": []
         }
       ],
       [
@@ -63,14 +65,24 @@
         }
       ],
       [
+        "expo-navigation-bar",
+        {
+          "visible": "leanback",
+          "barStyle": "light-content",
+          "backgroundColor": "#0D1B2A"
+        }
+      ],
+      [
         "expo-build-properties",
         {
           "android": {
-            "usesCleartextTraffic": true
+            "usesCleartextTraffic": true,
+            "kotlinVersion": "1.9.23"
           }
         }
       ],
-      "expo-file-system"
+      "expo-file-system",
+      "expo-haptics"
     ],
     "extra": {
       "eas": {
