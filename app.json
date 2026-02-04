@@ -16,7 +16,8 @@
       "bundleIdentifier": "com.osmarcruz.deolhonavalidade",
       "infoPlist": {
         "NSCameraUsageDescription": "Precisamos da câmera para ler códigos de barras e tirar fotos dos produtos.",
-        "NSPhotoLibraryUsageDescription": "Precisamos acessar suas fotos para salvar os produtos."
+        "NSPhotoLibraryUsageDescription": "Precisamos acessar suas fotos para salvar os produtos.",
+        "NSPhotoLibraryAddUsageDescription": "Precisamos salvar backups e fotos na sua galeria."
       }
     },
     "android": {
@@ -51,6 +52,22 @@
         {
           "icon": "./src/assets/logo.png",
           "color": "#0D1B2A"
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Permitir acesso às fotos?",
+          "savePhotosPermission": "Permitir salvar fotos?",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
         }
       ],
       "expo-file-system"
