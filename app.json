@@ -81,8 +81,7 @@
           }
         }
       ],
-      "expo-file-system",
-      "expo-haptics"
+      "expo-file-system"
     ],
     "extra": {
       "eas": {
