@@ -33,12 +33,12 @@ Stack Tecnológico
 Estrutura de Código
 O projeto segue uma arquitetura limpa e modular baseada em Hooks e Services:
 /src
- ├── /assets          # Recursos estáticos (Logos, Ícones)
- ├── /hooks           # Lógica de Estado (useAppLogic.js centraliza as regras de negócio)
- ├── /services        # Comunicação com APIs Nativas
- │    ├── db.js           # Camada de abstração do SQLite
+ ├── /assets # Recursos estáticos (Logos, Ícones)
+ ├── /hooks # Lógica de Estado (useAppLogic.js centraliza as regras de negócio)
+ ├── /services  # Comunicação com APIs Nativas
+ │    ├── db.js  # Camada de abstração do SQLite
  │    └── notifications.js # Gerenciador de agendamentos
- └── /utils           # Utilitários e Constantes
+ └── /utils  # Utilitários e Constantes
       ├── constants.js    # Textos (i18n ready) e Paleta de Cores
       └── dateHelper.js   # Algoritmos de cálculo de datas
 
